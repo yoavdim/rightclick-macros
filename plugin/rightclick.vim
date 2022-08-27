@@ -27,7 +27,7 @@ function s:Rightclick_normal_defaults()
 	let g:rightclick_normal_items = ['save', 'quit', 'undo', 'redo', 'paste']
 	let g:rightclick_normal_macros = [':w
 ' , ':q
-', 'u', '', 'p']
+', 'u', '', '"+p']
 	" Ctrl-v Ctrl-M in insert mode to get '
 ', the literal for <Enter>
 	" Similarly Ctrl-v <Tab or Esc> for the corresponding literal characters.
@@ -35,7 +35,7 @@ endfunction
 
 function s:Rightclick_visual_defaults()
 	let g:rightclick_visual_items = ['copy', 'cut', 'paste']
-	let g:rightclick_visual_macros = ['y' , 'd', 'p']
+	let g:rightclick_visual_macros = ['"+y' , '"+d', '"+p']
 endfunction
 
 if( !exists('rightclick_normal_items') || !exists('rightclick_normal_macros') )
