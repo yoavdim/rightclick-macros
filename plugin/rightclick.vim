@@ -7,8 +7,8 @@ if (s:rightclick_default_mappings)
 	nnoremap <silent> <RightMouse> <LeftMouse>:call Rightclick_normal()<CR>
 	inoremap <silent> <RightMouse> <Esc>:call Rightclick_normal()<CR>
 	vnoremap <silent> <RightMouse> <LeftMouse>:call Rightclick_visual()<CR>
-	" Go to insert mode where ever you click
-	nnoremap <LeftMouse> <LeftMouse>i
+	" Go to insert mode where ever you click (commented-out)
+	" nnoremap <LeftMouse> <LeftMouse>i
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,8 +25,11 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function s:Rightclick_normal_defaults()
 	let g:rightclick_normal_items = ['save', 'quit', 'undo', 'redo', 'paste']
-	let g:rightclick_normal_macros = [':w' , ':q', 'u', '', 'p']
-	" Ctrl-v Ctrl-M in insert mode to get '', the literal for <Enter>
+	let g:rightclick_normal_macros = [':w
+' , ':q
+', 'u', '', 'p']
+	" Ctrl-v Ctrl-M in insert mode to get '
+', the literal for <Enter>
 	" Similarly Ctrl-v <Tab or Esc> for the corresponding literal characters.
 endfunction
 
